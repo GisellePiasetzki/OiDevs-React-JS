@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import fusca from '../src/assets/png/fusca.png';
 import './App.css';
 
-function App() {
+function App(meuCarro) {
+  console.log(meuCarro.modelo);
+  console.log(meuCarro.placa);
+  console.log(meuCarro.cor);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={fusca} className="App-logo" alt="logo" />
+        <h1>
+          Modelo: {meuCarro.modelo}
+        </h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Placa: {meuCarro.placa}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Giselle Piasetzki - iniciando com JS
-        </a>
+        <small>
+          Cor: {meuCarro.cor}
+        </small>
+
       </header>
     </div>
   );
